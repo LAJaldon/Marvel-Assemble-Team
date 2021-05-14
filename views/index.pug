@@ -1,0 +1,68 @@
+extends layout
+
+block content
+  - const marvelLogo = 'images/Marvel_logo.png'
+  .marvelApp
+    .selectPlayers
+      .marvelImage
+        img(src= marvelLogo height= 60 width= 170)
+      h1.selectionTitle Assemble your Team
+      .characterSelection
+        each position in standardPositions
+            label.selectlabel #{position} 
+            .ui.fluid.selection.dropdown 
+              input(type='hidden' name='user')
+              i.dropdown.icon 
+              .default.text Select a Hero
+              .menu
+                each character in json
+                  .item(data-value= `${character.name}`) 
+                    img.ui.mini.avatar.image(src= `${character.thumbnail.path}.${character.thumbnail.extension}`) 
+                    | #{character.name}
+      .positionSelectOption 
+          select.ui.dropdown
+            each position in optionalPositions 
+              option(value = position) #{position}    
+          .ui.selection.dropdown 
+            input(type='hidden' name='hero')
+            i.dropdown.icon 
+            .default.text Select a Hero
+            .menu
+              each character in json
+                .item(data-value= `${character.name}`) 
+                  img.ui.mini.avatar.image(src= `${character.thumbnail.path}.${character.thumbnail.extension}`) 
+                  | #{character.name}
+    .characterList
+      h1.characterListHeader Heroes list
+      each character in json 
+        - var descriptionLength = character.description.length;
+        .flip-card
+          .flip-card-inner
+            .flip-card-front
+              .characterImage
+                img(src = `${character.thumbnail.path}.${character.thumbnail.extension}` height = 300 width = 300 alt ='Avatar')
+            .flip-card-back  
+              .characterDetails
+                h1.heroName #{character.name}
+                if descriptionLength > 0
+                  h3 #{character.description}
+                else 
+                  h3 No description provided
+                if character.comics.items.length > 0
+                  h3 #{character.name} is featured in #{character.comics.items[1].name}
+                else 
+                  h3 Not specified which comic #{character.name} appears in 
+                if character.series.items[1] !== undefined
+                  h3 #{character.name} appears in #{character.series.items[1].name}
+                else 
+                  h3 Not specified which series #{character.name} appears in 
+    script.
+      $('.ui.dropdown').dropdown();
+
+
+            
+
+   
+
+
+

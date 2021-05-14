@@ -1,0 +1,104 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightblue;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+.marvelImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.characterListHeader{
+  text-align: center;
+  margin-bottom: 5%;
+  color: #CC4425;
+}
+
+.selectionTitle{
+  text-align: center;
+  margin-bottom: 3%;
+  color: #CC4425;
+}
+
+.heroName{
+  color: yellow;
+}
+
+.selectPlayers{
+  border:1px solid black;
+  padding: 2%;
+  display: block;
+  width: 37%;
+  position: fixed;
+}
+
+.characterList{
+  float: right;
+  width: 50%;
+}
+
+.marvelApp:after{
+  display: table;
+  clear: both;
+}
+
+.ui.selection.dropdown{
+  margin-bottom: 2%;
+  margin-right: 2%;
+}
+
+.selectLabel{
+  display: inline-block;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid lightblue;
+  perspective: 1000px; 
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #ED1D24;
+  color: black;
+  transform: rotateY(180deg);
+  overflow: auto;
+}
