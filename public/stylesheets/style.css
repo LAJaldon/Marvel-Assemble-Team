@@ -10,10 +10,11 @@ a {
 }
 
 .marvelImage{
+  margin-top: 3%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+  margin-bottom: -5%;
+  margin-left: 27%;
+  width: 50%;
 }
 
 .characterListHeader{
@@ -24,7 +25,6 @@ a {
 
 .selectionTitle{
   text-align: center;
-  margin-bottom: 3%;
   color: #CC4425;
 }
 
@@ -34,10 +34,20 @@ a {
 
 .selectPlayers{
   border:1px solid black;
-  padding: 2%;
   display: block;
-  width: 37%;
+  width: 40%;
   position: fixed;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.positionSelectOption{
+  display: flex;
+  flex-direction: row;
+}
+
+.ui.dropdown{
+  width: 50%;
 }
 
 .characterList{
@@ -51,7 +61,7 @@ a {
 }
 
 .ui.selection.dropdown{
-  margin-bottom: 2%;
+  margin-bottom: 6%;
   margin-right: 2%;
 }
 
@@ -98,7 +108,8 @@ a {
 
 .flip-card-back {
   background-color: #ED1D24;
-  color: black;
+  color: white;
   transform: rotateY(180deg);
   overflow: auto;
+  padding: 2%;
 }

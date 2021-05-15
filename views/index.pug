@@ -6,7 +6,7 @@ block content
     .selectPlayers
       .marvelImage
         img(src= marvelLogo height= 60 width= 170)
-      h1.selectionTitle Assemble your Team
+      h1.selectionTitle Assemble Your Team
       .characterSelection
         each position in standardPositions
             label.selectlabel #{position} 
@@ -19,6 +19,7 @@ block content
                   .item(data-value= `${character.name}`) 
                     img.ui.mini.avatar.image(src= `${character.thumbnail.path}.${character.thumbnail.extension}`) 
                     | #{character.name}
+      label.selectlabel Select position of your final hero
       .positionSelectOption 
           select.ui.dropdown
             each position in optionalPositions 
@@ -33,7 +34,7 @@ block content
                   img.ui.mini.avatar.image(src= `${character.thumbnail.path}.${character.thumbnail.extension}`) 
                   | #{character.name}
     .characterList
-      h1.characterListHeader Heroes list
+      h1.characterListHeader Heroes List
       each character in json 
         - var descriptionLength = character.description.length;
         .flip-card
