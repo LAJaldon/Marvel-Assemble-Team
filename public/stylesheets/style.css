@@ -11,11 +11,9 @@ a {
 
 .marvelImage{
   margin-top: 3%;
-  display: block;
-  margin-bottom: -5%;
-  margin-left: 27%;
-  width: 50%;
+  margin-bottom: -7%;
 }
+
 
 .characterListHeader{
   text-align: center;
@@ -23,7 +21,7 @@ a {
   color: #CC4425;
 }
 
-.selectionTitle{
+.header{
   text-align: center;
   color: #CC4425;
 }
@@ -39,11 +37,6 @@ a {
   position: fixed;
   padding-left: 5%;
   padding-right: 5%;
-}
-
-.positionSelectOption{
-  display: flex;
-  flex-direction: row;
 }
 
 .ui.dropdown{
