@@ -12,8 +12,8 @@ const marvel = api.createClient({
 router.get('/', function(req, res, next) {
   let charactersNameArray = new Array(20);
   // Store positions in array to be included in dropdown selection
-  const standardPositions =["GK", "ST", "MD", "DF"] ;
-  const optionalPositions = ["Select position", "ST", "MD", "DF"];
+  const standardPositions =["Leader", "Attacker", "Defender", "Support"] ;
+  const optionalPositions = ["Select position", "Attacker", "Defender", "Support"];
 
   marvel.characters.findAll().then(function(body){
     const json = body.data;
